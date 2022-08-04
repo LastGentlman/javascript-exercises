@@ -27,6 +27,7 @@ const power = function(n1,n2) {
 };
 
 const factorial = (n) => {
+  if (n < 0) return 0
   if (n === 0 || n === 1) return 1;
 
   for (let i = n - 1; i >= 1; i--) {
@@ -35,6 +36,15 @@ const factorial = (n) => {
 
   return n;   // ok
 };
+
+console.log('Testing math operations')
+console.log('---------')
+console.log('5+5 =',add(5,5))
+console.log('10-5 =',subtract(10,5))
+console.log('5 + 5 =',sum([5,5]))
+console.log('5 * 5 =',multiply([5,5]))
+console.log('5 ** 2 =',power(5,2))
+console.log('factorial de 5 =',factorial(5))
 
 // Do not edit below this line
 module.exports = {
